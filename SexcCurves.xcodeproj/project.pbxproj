@@ -46,6 +46,7 @@
 		FC0D4BCA27D60B7D00705909 /* UIView+Embed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Embed.swift"; sourceTree = "<group>"; };
 		FC0D4BCC27D6119F00705909 /* UIEdgeInsets+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Convenience.swift"; sourceTree = "<group>"; };
 		FC0D4BCE27D614D000705909 /* GameSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSuccessViewController.swift; sourceTree = "<group>"; };
+		FCA554A527D624080040D2D2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +90,7 @@
 				FC0D4BAD27D5E65A00705909 /* Assets.xcassets */,
 				FC0D4BAF27D5E65A00705909 /* LaunchScreen.storyboard */,
 				FC0D4BB227D5E65A00705909 /* Info.plist */,
+				FCA554A527D624080040D2D2 /* README.md */,
 			);
 			path = SexcCurves;
 			sourceTree = "<group>";
