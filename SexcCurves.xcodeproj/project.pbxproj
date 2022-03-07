@@ -13,6 +13,13 @@
 		FC0D4BAC27D5E65700705909 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC0D4BAA27D5E65700705909 /* Main.storyboard */; };
 		FC0D4BAE27D5E65A00705909 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC0D4BAD27D5E65A00705909 /* Assets.xcassets */; };
 		FC0D4BB127D5E65A00705909 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC0D4BAF27D5E65A00705909 /* LaunchScreen.storyboard */; };
+		FC0D4BB927D5E72A00705909 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D4BB827D5E72A00705909 /* CGRect+Extensions.swift */; };
+		FC0D4BBB27D5E94400705909 /* UIView+Centering.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D4BBA27D5E94400705909 /* UIView+Centering.swift */; };
+		FC0D4BBD27D5EF3E00705909 /* UITouch+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D4BBC27D5EF3E00705909 /* UITouch+Extensions.swift */; };
+		FC0D4BBF27D5F7D200705909 /* FadingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D4BBE27D5F7D200705909 /* FadingLabel.swift */; };
+		FC0D4BC127D5F91600705909 /* TimeInterval+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D4BC027D5F91600705909 /* TimeInterval+Animation.swift */; };
+		FC0D4BC327D5FC6F00705909 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D4BC227D5FC6F00705909 /* CGPoint+Extensions.swift */; };
+		FC0D4BC527D6004200705909 /* UILabel+RandomSizeChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D4BC427D6004200705909 /* UILabel+RandomSizeChange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		FC0D4BAD27D5E65A00705909 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC0D4BB027D5E65A00705909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC0D4BB227D5E65A00705909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC0D4BB827D5E72A00705909 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
+		FC0D4BBA27D5E94400705909 /* UIView+Centering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Centering.swift"; sourceTree = "<group>"; };
+		FC0D4BBC27D5EF3E00705909 /* UITouch+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITouch+Extensions.swift"; sourceTree = "<group>"; };
+		FC0D4BBE27D5F7D200705909 /* FadingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingLabel.swift; sourceTree = "<group>"; };
+		FC0D4BC027D5F91600705909 /* TimeInterval+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Animation.swift"; sourceTree = "<group>"; };
+		FC0D4BC227D5FC6F00705909 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		FC0D4BC427D6004200705909 /* UILabel+RandomSizeChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+RandomSizeChange.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +70,16 @@
 		FC0D4BA327D5E65700705909 /* SexcCurves */ = {
 			isa = PBXGroup;
 			children = (
+				FC0D4BBE27D5F7D200705909 /* FadingLabel.swift */,
 				FC0D4BA427D5E65700705909 /* AppDelegate.swift */,
 				FC0D4BA627D5E65700705909 /* SceneDelegate.swift */,
 				FC0D4BA827D5E65700705909 /* ViewController.swift */,
+				FC0D4BC027D5F91600705909 /* TimeInterval+Animation.swift */,
+				FC0D4BB827D5E72A00705909 /* CGRect+Extensions.swift */,
+				FC0D4BBA27D5E94400705909 /* UIView+Centering.swift */,
+				FC0D4BBC27D5EF3E00705909 /* UITouch+Extensions.swift */,
+				FC0D4BC227D5FC6F00705909 /* CGPoint+Extensions.swift */,
+				FC0D4BC427D6004200705909 /* UILabel+RandomSizeChange.swift */,
 				FC0D4BAA27D5E65700705909 /* Main.storyboard */,
 				FC0D4BAD27D5E65A00705909 /* Assets.xcassets */,
 				FC0D4BAF27D5E65A00705909 /* LaunchScreen.storyboard */,
@@ -139,7 +160,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC0D4BA927D5E65700705909 /* ViewController.swift in Sources */,
+				FC0D4BBD27D5EF3E00705909 /* UITouch+Extensions.swift in Sources */,
+				FC0D4BBF27D5F7D200705909 /* FadingLabel.swift in Sources */,
+				FC0D4BBB27D5E94400705909 /* UIView+Centering.swift in Sources */,
+				FC0D4BC527D6004200705909 /* UILabel+RandomSizeChange.swift in Sources */,
+				FC0D4BC327D5FC6F00705909 /* CGPoint+Extensions.swift in Sources */,
+				FC0D4BB927D5E72A00705909 /* CGRect+Extensions.swift in Sources */,
 				FC0D4BA527D5E65700705909 /* AppDelegate.swift in Sources */,
+				FC0D4BC127D5F91600705909 /* TimeInterval+Animation.swift in Sources */,
 				FC0D4BA727D5E65700705909 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
