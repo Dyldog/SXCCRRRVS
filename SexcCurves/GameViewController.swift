@@ -60,7 +60,6 @@ class GameViewController: UIViewController, LevelDelegate {
         levelTitleLabel.text = currentType.levelTitle
         let viewController = currentType.init()
         viewController.delegate = self
-//        viewController.willMove(toParent: self)
         addChild(viewController)
         viewController.view.isUserInteractionEnabled = true
         viewController.view.embed(in: levelContainer)
