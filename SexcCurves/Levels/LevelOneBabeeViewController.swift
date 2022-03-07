@@ -7,10 +7,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LevelOneBabeeViewController: UIViewController, LevelViewController {
     
     let arrowView: UILabel
     let circleView: UILabel
+    var updateTimer: Timer!
+    
+    weak var delegate: LevelDelegate?
+    
+    static var levelTitle: String { "This is what you wanted" }
+    
+    var currentRound = 0
+    var totalRounds = 10
     
     var boneState: BoneState {
         let arrowRect = arrowView.frame
@@ -62,13 +70,8 @@ class ViewController: UIViewController {
         view.addSubview(arrowView)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        start()
-    }
-    
     func start() {
-        Timer.scheduledTimer(
+        updateTimer = Timer.scheduledTimer(
             timeInterval: .frameRate,
             target: self,
             selector: #selector(update),
@@ -83,9 +86,20 @@ class ViewController: UIViewController {
         
         if didReset {
             resetRoundOutcome()
+            currentRound += 1
+            
+            if currentRound == totalRounds {
+                finish()
+            }
         }
         
+        delegate?.didUpdateProgress(to: "Sexc Time \(currentRound) / \(totalRounds)")
         updateBackgroundForCurrentBoneState()
+    }
+    
+    func finish() {
+        updateTimer.invalidate()
+        delegate?.didFinish()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -93,7 +107,10 @@ class ViewController: UIViewController {
         circleView.center = arrowView.center
     }
     
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+    func handleTouchesBegan(_ touches: Set<UITouch>) {
+        //
+    }
+    func handleTouchesMoved(_ touches: Set<UITouch>) {
         arrowView.center.y += touches.first!.verticalChange(in: view)
         updateBackgroundForCurrentBoneState()
     }
@@ -110,11 +127,11 @@ class ViewController: UIViewController {
         view.backgroundColor = color
     }
     
-    var oscillationPeriod: CGFloat = 100
-    var oscillationMagnitude: CGFloat = 50
+    var oscillationPeriod: CGFloat = 500
+    var oscillationMagnitude: CGFloat = 10
     var circlePositionStep: CGFloat = 5
     
-    /// Used to adjust the oscillation so it animates smoothly. 
+    /// Used to adjust the oscillation so it animates smoothly.
     var oscillationXOffset: CGFloat = 0
 
     /// Moves the circle view
@@ -183,13 +200,13 @@ class ViewController: UIViewController {
     
     func changeOscillationMagnitude(success: Bool) {
         // Oscillates more when user succeeds
-        oscillationMagnitude += (success ? 1 : -1) * 10
+        oscillationMagnitude += (success ? 1 : -1) * CGFloat((0...10).randomElement()!)
         // TODO: Update oscillation offset so the change animates smoothly
     }
     
     func changeOscillationPeriod(success: Bool) {
         // Shorter period when user succeeds
-        oscillationPeriod += (success ? -1 : 1) * 10
+        oscillationPeriod += (success ? -1 : 1) * CGFloat((0...10).randomElement()!)
         // TODO: Update oscillation offset so the change animates smoothly
     }
     
@@ -240,3 +257,14 @@ enum CoitalState {
 }
 
 
+class FakeLevelTwoBabee: LevelOneBabeeViewController {
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        loadViewIfNeeded()
+        view.backgroundColor = .blue
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+}
