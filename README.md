@@ -2,7 +2,7 @@
 
 ## Rules
 
-1. Humour is for everyone. Don't be hurtful.
+1. Humour is for everyone. This is a game about sex and sex is a sensitive topic. Do your best to be inclusive.
 2. Levels must be sexy
 3. Levels must have curves 
 4. Levels must end somehow
