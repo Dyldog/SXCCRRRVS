@@ -104,7 +104,7 @@ class LevelOneBabeeViewController: UIViewController, LevelViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         arrowView.center = view.bounds.center
-        circleView.center = arrowView.center
+        circleView.center = view.trailingCenter
     }
     
     func handleTouchesBegan(_ touches: Set<UITouch>) {
