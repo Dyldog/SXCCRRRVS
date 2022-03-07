@@ -233,10 +233,10 @@ class LevelOneBabeeViewController: UIViewController, LevelViewController {
         view.addSubview(label)
     }
     
-    let successMessages: [String] = [
+    var successMessages: [String] { [
         "Feel like a big man now?",
-        "Round 2?"
-    ]
+        "Round \(currentRound + 1)?"
+    ] }
     
     let failureMessages: [String] = [
         "Better luck next time, cowboy",
